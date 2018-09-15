@@ -1,4 +1,6 @@
-# stockfolio
+# Stockfolio
+
+
 
 ## Project setup
 
