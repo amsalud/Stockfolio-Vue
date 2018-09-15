@@ -1,6 +1,8 @@
 # Stockfolio
 
 
+This project is built with Vue. It is built for demo and educational purposes only.
+
 
 ## Project setup
 
