@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark color="primary">
+  <v-toolbar dark color="black">
     <v-toolbar-title class="white--text mr-3" @click="goHome">StockFolio</v-toolbar-title>
     <v-toolbar-items>
       <v-btn flat to="/portfolio">Portfolio</v-btn>
