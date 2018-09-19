@@ -1,9 +1,9 @@
 <template>
   <v-app>
-  <div id="app">
-    <app-header></app-header>
-    <router-view/>
-  </div>
+    <div id="app">
+      <app-header></app-header>
+      <router-view/>
+    </div>
   </v-app>
 </template>
 
@@ -13,6 +13,9 @@ import Header from './components/Header.vue'
 export default {
   components: {
     appHeader: Header
+  },
+  created() {
+    this.$store.dispatch('initStocks')
   }
 }
 </script>
