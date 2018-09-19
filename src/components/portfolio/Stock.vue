@@ -7,7 +7,7 @@
             <v-flex ma-3>
                 <v-text-field label="Quantity" type="number" v-model="quantity"></v-text-field>
             </v-flex>
-            <v-btn color="success" @click="sellStock" :disabled="quantity <=0">Sell</v-btn>
+            <v-btn color="error" @click="sellStock" :disabled="quantity <=0">Sell</v-btn>
         </v-card>
     </v-flex>
 </template>
@@ -26,7 +26,7 @@ export default {
         stockPrice: this.stock.price,
         quantity: this.quantity
       }
-      this.sellStock()
+      this.sellStock(order)
     }
   }
 }
