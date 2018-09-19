@@ -1,22 +1,14 @@
 <template>
   <v-container fluid align-center mt-5 class="stocks-dashboard">
     <v-layout wrap>
-      <v-flex v-for="stock in stocks" v-bind:key="stock.id">
-        <v-card class="card">
-          <div class="header">
-            {{ stock.name}} (Price: {{stock.price}})
-          </div>
-          <v-flex ma-3>
-            <v-text-field label="Quantity" type="number"></v-text-field>
-          </v-flex>
-          <v-btn color="success">Buy</v-btn>
-        </v-card>
-      </v-flex>
+      <app-stock v-for="stock in stocks" v-bind:key="stock.id" :stock="stock"></app-stock>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import Stock from './Stock'
+
 export default {
   data: () => ({
     stocks: [
@@ -26,7 +18,10 @@ export default {
       { id: 4, name: 'Twitter', price: 210 },
       { id: 5, name: 'Amazon', price: 300 }
     ]
-  })
+  }),
+  components: {
+    appStock: Stock
+  }
 }
 </script>
 
