@@ -27,7 +27,7 @@ export default {
     width: 250px;
     margin: 10px;
     .header {
-      background-color: green;
+      background-color: #4caf50;
       color: white;
       padding: 10px;
       text-align: left;
