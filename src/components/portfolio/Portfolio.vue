@@ -1,8 +1,11 @@
 <template>
   <v-container fluid mt-5 class="portfolio-dashboard">
-    <v-layout>
+    <v-layout v-if="stocks.length">
       <app-stock v-for="stock in stocks" :stock="stock" v-bind:key="stock.id"></app-stock>
     </v-layout>
+    <div class="dashboard-placeholder" v-if="!stocks.length">
+      <h1 >You have no stocks in your portfolio</h1>
+    </div>
   </v-container>
 </template>
 
@@ -22,7 +25,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .portfolio-dashboard {
   .card {
     width: 250px;
@@ -34,5 +37,9 @@ export default {
       text-align: left;
     }
   }
+}
+
+.dashboard-placeholder{
+  margin:23% auto 0;
 }
 </style>
